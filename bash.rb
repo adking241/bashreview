@@ -20,6 +20,7 @@ end
 
 def so_close(my_ticket4, winning_num)
 	false
+	so_close = winning_num
 	winning_num == "4443"
 	my_ticket4 = "4444"
 	counter = 0
@@ -40,12 +41,10 @@ def so_close(my_ticket4, winning_num)
 			p "you lost"
 		end	
 	end
-def run_program
-	winners_or_losers2
-	winner
-	so close
 end
 
 run_program
+p so_close
 
 end
+
