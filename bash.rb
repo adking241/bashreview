@@ -35,7 +35,7 @@ def so_close(my_ticket4, winning_num)
 	if counter == 3
 		puts "you win"
 		"you win"
-	elsif position == 2
+	elsif counter == 2
 		puts "so close"
 		"so close"
 	else counter == 1 #prob not needed bc of line 17
