@@ -25,4 +25,4 @@ class BashTest < Minitest::Test
 		assert_equal(false, so_close(my_ticket4, winning_num))
 	end
 
-end
+end 
