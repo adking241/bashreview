@@ -9,12 +9,21 @@ def winners_or_losers2(winning_numbers3, my_ticket4)
 	end		
 end
 
+def winner(winning_numbers3, my_ticket4)
+	winning_numbers3.each do |ticket|
+	if my_ticket4 = ticket
+		result = "winner"
+	else
+		result = "loser"
+	end
+end
+
 def so_close(my_ticket4, winning_num)
 	false
 	winning_num == "4443"
 	my_ticket4 = "4444"
 	counter = 0
-	4.times do |index|
+	4.times do |ticket|
 		if winning_num(0) == my_ticket4(0)
 			counter = counter + 1
 		elsif winning_num(1) == my_ticket4(1)
@@ -27,8 +36,16 @@ def so_close(my_ticket4, winning_num)
 			p "you win"
 		elsif counter == 2
 			p "so close"
-		elsif counter == 1
+		else counter == 1 #prob not needed bc of line 17
 			p "you lost"
 		end	
 	end
+def run_program
+	winners_or_losers2
+	winner
+	so close
+end
+
+run_program
+
 end
