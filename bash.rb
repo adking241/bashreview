@@ -11,7 +11,7 @@ end
 
 def winner(winning_numbers3, my_ticket4)
 	winning_numbers3.each do |ticket|
-		if my_ticket4 = ticket
+		if my_ticket4 = winning_num
 		result = "winner"
 		else
 		result = "loser"
@@ -21,29 +21,31 @@ end
 
 def so_close(my_ticket4, winning_num)
 	false
-	winning_num = so_close
-	winning_num == "4443"
-	my_ticket4 = "4444"
+	puts "winning_num is #{winning_num}"
 	counter = 0
-	4.times do |ticket|
-		if winning_num(0) == my_ticket4(0)
+	position = 0
+	winning_num.each_with_index do |ticket|
+		if winning_num[position] == my_ticket4[position]
 			counter = counter + 1
-		elsif winning_num(1) == my_ticket4(1)
-			counter = counter + 1
-		elsif winning_num(2) == my_ticket4(2)
-			counter = counter + 1
-		elsif winning_num(3) == my_ticket4(3)
-			counter = counter + 1
-		elsif counter == 3
-			puts "you win"
-			"you win"
-		elsif counter == 2
-			puts "so close"
-			"so close"
-		else counter == 1 #prob not needed bc of line 17
-			puts "you lost"
-			"you lost"
-		end	
+			puts "counter is #{counter}"
+		end
+		position = position + 1
 	end
+	# puts "counter is #{counter}"
+	if counter == 3
+		puts "you win"
+		"you win"
+	elsif position == 2
+		puts "so close"
+		"so close"
+	else counter == 1 #prob not needed bc of line 17
+		puts "you lost"
+		"you lost"
+	end
+
 end
 
+winning_num = ["4443","1234"]
+my_ticket4 = "4444"
+
+so_close(my_ticket4, winning_num)
